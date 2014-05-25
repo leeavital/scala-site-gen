@@ -1,0 +1,34 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>{{title}}</title>
+    <link type="text/css" href="../static/site.css" rel="stylesheet" />
+    <link type="text/css" href="../static/grids.css" rel="stylesheet" />
+
+  </head>
+
+  <body>
+      <div class="header " style="height: 350px; background-color: blue">
+        <div class="container_12">
+          <div class="grid_4 alpha" style="height: 350px; text-align: center; display: inline-block;"  >
+            <img src="../static/me.jpeg" style="border-radius: 50%; margin: 25px 0px; height: 300px" />
+          </div>
+          <div class="grid_8 omega">{{title}}</div>
+        </div>
+      </div>
+      <br style="height: 20px" />
+      <div class="container_12">
+          <div class="alpha grid_4">
+            <ul>
+              {{#toc}}
+                <li><a href="{{slug}}.html">{{post}}</a></li>
+              {{/toc}}
+            </ul>
+          </div>
+
+          <div class="grid_8 omega">
+              {{{body}}}
+          </div>
+      </div>
+  </body>
+</html>
